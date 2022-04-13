@@ -25,6 +25,8 @@ export const Entry = ({ entry, mood, onEditButtonClick, onDeleteButtonClick }) =
         <p className="entry__entry">{entry.entry}</p>
         <p className="entry__date">{entry.date}</p>
         <p className="entry__mood">{mood?.label}</p>
+        <p className="entry__tags">{entry.tags?.map(t => <p>{t.name}</p>)}</p>
+        
         <div className="buttons">
           <button className={`button ${getMessageType()} is-outlined`} onClick={
             () => {
